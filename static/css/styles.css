@@ -7,16 +7,29 @@
 /* This is a tag selector */
 body {
     header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 3px;
+
+
         background-color: black;
         h1 {
             color: white;
-            display: inline;
+            
         }
 
         nav {
-            display: inline;
+            
             a {
                 color: white;
+                text-decoration: none;
+                text-shadow: 1px 1px 1px  rgb(71, 104, 22);
+                transition-duration: 1s;
+            }
+            a:hover {
+                color: rgb(158, 246, 27);
+                transition-duration: 500ms;
             }
         }
     }
@@ -24,14 +37,16 @@ body {
     main {
         section {
             width: 80%;
-            background-color: grey;
+            /* background-color: grey; */
             margin: auto;
             margin-top: 10px;
 
-            display: flex;
+            
 
         }
         section#intro {
+            display: flex;
+            
             figure {
                 height: 200px;
                 width: 50%;
@@ -43,16 +58,21 @@ body {
                     object-position: 0px 0px;;
                 }
                 figcaption {
-                    
-                    color:aliceblue;
+                    padding-left: 4px;
+                    color:rgb(0, 0, 0);
                 }
             }
 
-            div {
+            div#intro-quote {
                
                 width: 50%;
                 padding: 5px;
-                border: 1px solid;
+                /* border: 1px solid; */
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
         
             }
         }
@@ -65,4 +85,11 @@ body {
 
 
 
+.shadow {
+    box-shadow: 1px 1px 3px 1px  grey;
+}
 
+.rounded-edge {
+    border-radius: 5px;
+    overflow: hidden;
+}
